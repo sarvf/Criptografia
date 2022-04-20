@@ -31,7 +31,7 @@ Pass1.clear()
 Pass2.clear()
 User.clear()
 Email.clear()
-file1 = open('./Hito3_2.txt',"r")
+file1 = open('Hito3_2.txt')
 N=0
 for i in file1:
     line = file1.readline()
