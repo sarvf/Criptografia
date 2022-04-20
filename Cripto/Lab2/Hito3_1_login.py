@@ -51,39 +51,6 @@ print(Pass1) #imprimir contraseña o conjunto de contraseñas cuando son mas de 
 print(Pass2) #imprimir contraseña o conjunto de contraseñas cuando son mas de 1
 
 
-
-########## codigo para mas de un login ############
-
-# driver = webdriver.Chrome('./chromedriver.exe', options=opts) # abre chrome y agrega taps con basura par tratar de distraer a los capchas 
-# 
-# driver = webdriver.Chrome('./chromedriver.exe') # abre solo chrome
-# x=0
-# for x in range(N):
-#     driver.fullscreen_window
-#     driver.get('https://www.lapolar.cl/Iniciar-Sesion/')
-#     WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div/main/div/div/div/div[6]/form/div[1]/input')))
-#     imput_email= driver.find_element(By.XPATH,'/html/body/div[1]/div/main/div/div/div/div[6]/form/div[1]/input')
-#     print("s1")
-#     sleep(2)
-#     imput_pass = driver.find_element(By.XPATH ,'/html/body/div[1]/div/main/div/div/div/div[6]/form/div[2]/input')
-#     print("s2")
-#     sleep(2)
-#     imput_buton = driver.find_element(By.XPATH,'/html/body/div[1]/div/main/div/div/div/div[6]/form/div[4]/input')
-#     print(Email[x],"\n")
-#     print(Pass[x],"\n")
-#     print("s3")
-#     sleep(2)
-#     imput_email.send_keys(Email[x])
-#     print("s4")
-#     sleep(2)
-#     imput_pass.send_keys(Pass[x])
-#     print("s5")
-#     sleep(2)
-#     imput_buton.click()
-#     print("s6")
-#     sleep(2)
-#     WebDriverWait(driver,5)
-
 ####################################################
 ############## codigo para solo un user ############
 ####################################################
@@ -200,46 +167,46 @@ driver = webdriver.Chrome('./chromedriver.exe')
 
 
 
-############## Olvidar Password ###################
-print("olvidar contraseña .........")
-driver.get('https://www.lapolar.cl/Iniciar-Sesion/')
-WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[1]/form/div[6]/a')))
-imput_buton= driver.find_element(By.XPATH, '/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[1]/form/div[6]/a')
-print("sleep ",s)
-s+=1
-sleep(2)
-print("Haciendo click olvidar password ........")
-imput_buton.click()
-sleep(5)
-imput_email= driver.find_element(By.XPATH,'/html/body/div[8]/div[2]/div/div/form/div[1]/div[1]/div[2]/input')
-s+=1
-sleep(2)
-imput_buton= driver.find_element(By.XPATH,'//*[@id="reset-password-email"]')
-print("sleep ",s)
-s+=1
-sleep(2)
-print("insertando Correo electronico  ........")
-imput_email.send_keys(Email)
-print("sleep ",s)
-s+=1
-sleep(2)
-print("Haciendo click en enviar correo de recuperacion ........")
-# imput_buton.click()
-
-# # con correo termporal
-
-
-
-# # gmail correo udp test
-# driver.get("https://accounts.google.com/signin/v2/identifier?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hl=es&flowName=GlifWebSignIn&flowEntry=ServiceLogin#__utma=29003808.887474793.1650405603.1650405603.1650405603.1&__utmb=29003808.0.10.1650405603&__utmc=29003808&__utmx=-&__utmz=29003808.1650405603.1.1.utmcsr=google%7Cutmccn=(organic)%7Cutmcmd=organic%7Cutmctr=(not%20provided)&__utmv=-&__utmk=92103769")
-# WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input')))
-# imput_email = driver.find_element(By.XPATH,'/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input')
+# ############## Olvidar Password ###################
+# print("olvidar contraseña .........")
+# driver.get('https://www.lapolar.cl/Iniciar-Sesion/')
+# WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[1]/form/div[6]/a')))
+# imput_buton= driver.find_element(By.XPATH, '/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[1]/form/div[6]/a')
 # print("sleep ",s)
 # s+=1
 # sleep(2)
-# imput_email.send_keys(Email)
-
+# print("Haciendo click olvidar password ........")
+# imput_buton.click()
 # sleep(5)
+# imput_email= driver.find_element(By.XPATH,'/html/body/div[8]/div[2]/div/div/form/div[1]/div[1]/div[2]/input')
+# s+=1
+# sleep(2)
+# imput_buton= driver.find_element(By.XPATH,'//*[@id="reset-password-email"]')
+# print("sleep ",s)
+# s+=1
+# sleep(2)
+# print("insertando Correo electronico  ........")
+# imput_email.send_keys(Email)
+# print("sleep ",s)
+# s+=1
+# sleep(2)
+# print("Haciendo click en enviar correo de recuperacion ........")
+# # imput_buton.click()
+
+# # # con correo termporal
+
+
+
+# # # gmail correo udp test
+# # driver.get("https://accounts.google.com/signin/v2/identifier?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hl=es&flowName=GlifWebSignIn&flowEntry=ServiceLogin#__utma=29003808.887474793.1650405603.1650405603.1650405603.1&__utmb=29003808.0.10.1650405603&__utmc=29003808&__utmx=-&__utmz=29003808.1650405603.1.1.utmcsr=google%7Cutmccn=(organic)%7Cutmcmd=organic%7Cutmctr=(not%20provided)&__utmv=-&__utmk=92103769")
+# # WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input')))
+# # imput_email = driver.find_element(By.XPATH,'/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input')
+# # print("sleep ",s)
+# # s+=1
+# # sleep(2)
+# # imput_email.send_keys(Email)
+
+# # sleep(5)
 
 
 
@@ -326,9 +293,13 @@ print("Haciendo clic en Ingresar ....")
 imput_buton.click()
 WebDriverWait(driver,5)
 
-print("Ahora a cambiar la contraseña por dentro ....")
+
 
 ############## Cambio Interno de contraseña ################
+print("sleep ",s)
+s+=1
+sleep(2)
+print("Ahora a cambiar la contraseña por dentro ....")
 driver.get('https://www.lapolar.cl/Cambiar-clave/')
 print("sleep ",s)
 s+=1
@@ -376,22 +347,3 @@ print("Haciendo click en Actualizar contraseña ....")
 
 sleep(4)
 driver.close()
-
-
-    # ## parte capcha lamentabla mente es manual
-    # imput_pass= driver.find_element(By.XPATH,'/html/body/div[1]/div/main/div/div/div/div[6]/form/div[2]/input')
-    # print("s7")
-    #sleep(2)
-    # Y = input("y para cuando el cacha esta check")
-    # if Y is"y":
-    #     print("s8")
-        #sleep(2)
-    #     imput_buton = driver.find_element(By.XPATH,'/html/body/div[1]/div/main/div/div/div/div[6]/form/div[4]/input')
-    #     print("s9")
-        #sleep(2)
-    #     imput_pass.send_keys(Pass[x])
-    #     print("s10")
-        #sleep(2)
-    #     imput_buton.click()
-    #     print("s11")
-        #sleep(2)
