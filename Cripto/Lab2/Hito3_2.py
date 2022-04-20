@@ -1,17 +1,10 @@
-import _random
-from ast import For
-import email
-from re import X
 from time import sleep
-from tkinter import E, N, Button
 from pandas import RangeIndex
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
-
-from Cripto.Lab2.Hito2 import Pass
 opts= Options()
 opts.add_argument("Mozilla/5.0 (Windows NT 4.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36")
 
