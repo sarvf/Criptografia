@@ -66,147 +66,147 @@ Rut=""
 ####################################################
 driver = webdriver.Chrome('./chromedriver.exe')
 ############# Register #############################
-# print("Registrar usuario ..........")
-# driver.get('https://www.lapolar.cl/Iniciar-Sesion/')
-# WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/ul/li[2]/a')))
-# imput_buton = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/ul/li[2]/a')
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# print("Haciendo click en el registro ........")
+print("Registrar usuario ..........")
+driver.get('https://www.lapolar.cl/Iniciar-Sesion/')
+WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/ul/li[2]/a')))
+imput_buton = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/ul/li[2]/a')
+print("sleep ",s)
+s+=1
+sleep(1)
+print("Haciendo click en el registro ........")
+imput_buton.click()
+WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/ul/li[2]/a')))
+imput_buton = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/button')
+print("sleep ",s)
+s+=1
+sleep(1)
+imput_nombre = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[2]/input')
+print("sleep ",s)
+s+=1
+sleep(1)
+imput_apellido = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[3]/input')
+print("sleep ",s)
+s+=1
+sleep(1)
+imput_Rut = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[5]/div/input')
+print("sleep ",s)
+s+=1
+sleep(1)
+imput_telefono = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[4]/div/div[2]/input')
+print("sleep ",s)
+s+=1
+sleep(1)
+imput_email = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[6]/input')
+print("sleep ",s)
+s+=1
+sleep(1)
+imput_checbox = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[7]/div[1]/div[1]/label/span')
+print("sleep ",s)
+s+=1
+sleep(1)
+imput_pass = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[8]/input')
+print("sleep ",s)
+s+=1
+sleep(1)
+imput_confirmpass = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[9]/input')
+print("sleep ",s)
+s+=1
+sleep(1)
+imput_checbox2 = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[10]/label')
+print("sleep ",s)
+s+=1
+sleep(1)
+print("insertar nombre ........")
+imput_nombre.send_keys(Nombre)
+print("sleep ",s)
+s+=1
+sleep(1)
+print("insertar Apellido ........")
+imput_apellido.send_keys(Apellido)
+print("sleep ",s)
+s+=1
+sleep(1)
+print("insertar Telefono ........")
+imput_telefono.send_keys(Telefono)
+print("sleep ",s)
+s+=1
+sleep(1)
+print("insertar RUT ........")
+imput_Rut.send_keys(Rut)
+print("sleep ",s)
+s+=1
+sleep(1)
+print("insertar correo electronico ........")
+imput_email.send_keys(Email)
+print("sleep ",s)
+s+=1
+sleep(1)
+print("seleccioner genero masculino ........")
+imput_checbox.click()
+print("sleep ",s)
+s+=1
+sleep(1)
+print("insertar password ........")
+imput_pass.send_keys(Pass1)
+print("sleep ",s)
+s+=1
+sleep(1)
+print("insertar password nuevamente ........")
+imput_confirmpass.send_keys(Pass1)
+print("sleep ",s)
+s+=1
+sleep(1)
+print("deseleccionar los correos de spam ........")
+imput_checbox2.click()
+print("sleep ",s)
+s+=1
+sleep(1)
+print("click en finalizar registro ........")
 # imput_buton.click()
-# WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/ul/li[2]/a')))
-# imput_buton = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/button')
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# imput_nombre = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[2]/input')
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# imput_apellido = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[3]/input')
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# imput_Rut = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[5]/div/input')
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# imput_telefono = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[4]/div/div[2]/input')
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# imput_email = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[6]/input')
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# imput_checbox = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[7]/div[1]/div[1]/label/span')
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# imput_pass = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[8]/input')
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# imput_confirmpass = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[9]/input')
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# imput_checbox2 = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[10]/label')
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# print("insertar nombre ........")
-# imput_nombre.send_keys(Nombre)
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# print("insertar Apellido ........")
-# imput_apellido.send_keys(Apellido)
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# print("insertar Telefono ........")
-# imput_telefono.send_keys(Telefono)
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# print("insertar RUT ........")
-# imput_Rut.send_keys(Rut)
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# print("insertar correo electronico ........")
-# imput_email.send_keys(Email)
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# print("seleccioner genero masculino ........")
-# imput_checbox.click()
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# print("insertar password ........")
-# imput_pass.send_keys(Pass1)
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# print("insertar password nuevamente ........")
-# imput_confirmpass.send_keys(Pass1)
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# print("deseleccionar los correos de spam ........")
-# imput_checbox2.click()
-# print("sleep ",s)
-# s+=1
-# sleep(1)
-# print("click en finalizar registro ........")
-# # imput_buton.click()
 
 
 
 
-# ############## Olvidar Password ###################
-# print("olvidar contraseña .........")
-# driver.get('https://www.lapolar.cl/Iniciar-Sesion/')
-# WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[1]/form/div[6]/a')))
-# imput_buton= driver.find_element(By.XPATH, '/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[1]/form/div[6]/a')
+############## Olvidar Password ###################
+print("olvidar contraseña .........")
+driver.get('https://www.lapolar.cl/Iniciar-Sesion/')
+WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[1]/form/div[6]/a')))
+imput_buton= driver.find_element(By.XPATH, '/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[1]/form/div[6]/a')
+print("sleep ",s)
+s+=1
+sleep(2)
+print("Haciendo click olvidar password ........")
+imput_buton.click()
+sleep(5)
+imput_email= driver.find_element(By.XPATH,'/html/body/div[8]/div[2]/div/div/form/div[1]/div[1]/div[2]/input')
+s+=1
+sleep(2)
+imput_buton= driver.find_element(By.XPATH,'//*[@id="reset-password-email"]')
+print("sleep ",s)
+s+=1
+sleep(2)
+print("insertando Correo electronico  ........")
+imput_email.send_keys(Email)
+print("sleep ",s)
+s+=1
+sleep(2)
+print("Haciendo click en enviar correo de recuperacion ........")
+# imput_buton.click()
+
+# # con correo termporal
+
+
+
+# # gmail correo udp test
+# driver.get("https://accounts.google.com/signin/v2/identifier?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hl=es&flowName=GlifWebSignIn&flowEntry=ServiceLogin#__utma=29003808.887474793.1650405603.1650405603.1650405603.1&__utmb=29003808.0.10.1650405603&__utmc=29003808&__utmx=-&__utmz=29003808.1650405603.1.1.utmcsr=google%7Cutmccn=(organic)%7Cutmcmd=organic%7Cutmctr=(not%20provided)&__utmv=-&__utmk=92103769")
+# WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input')))
+# imput_email = driver.find_element(By.XPATH,'/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input')
 # print("sleep ",s)
 # s+=1
 # sleep(2)
-# print("Haciendo click olvidar password ........")
-# imput_buton.click()
+# imput_email.send_keys(Email)
+
 # sleep(5)
-# imput_email= driver.find_element(By.XPATH,'/html/body/div[8]/div[2]/div/div/form/div[1]/div[1]/div[2]/input')
-# s+=1
-# sleep(2)
-# imput_buton= driver.find_element(By.XPATH,'//*[@id="reset-password-email"]')
-# print("sleep ",s)
-# s+=1
-# sleep(2)
-# print("insertando Correo electronico  ........")
-# imput_email.send_keys(Email)
-# print("sleep ",s)
-# s+=1
-# sleep(2)
-# print("Haciendo click en enviar correo de recuperacion ........")
-# # imput_buton.click()
-
-# # # con correo termporal
-
-
-
-# # # gmail correo udp test
-# # driver.get("https://accounts.google.com/signin/v2/identifier?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hl=es&flowName=GlifWebSignIn&flowEntry=ServiceLogin#__utma=29003808.887474793.1650405603.1650405603.1650405603.1&__utmb=29003808.0.10.1650405603&__utmc=29003808&__utmx=-&__utmz=29003808.1650405603.1.1.utmcsr=google%7Cutmccn=(organic)%7Cutmcmd=organic%7Cutmctr=(not%20provided)&__utmv=-&__utmk=92103769")
-# # WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input')))
-# # imput_email = driver.find_element(By.XPATH,'/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input')
-# # print("sleep ",s)
-# # s+=1
-# # sleep(2)
-# # imput_email.send_keys(Email)
-
-# # sleep(5)
 
 
 
