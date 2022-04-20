@@ -21,8 +21,8 @@ opts.add_argument("Mozilla/5.0 (Windows NT 4.0; WOW64) AppleWebKit/537.36 (KHTML
 # http://jqueryrut.sourceforge.net/generador-de-ruts-chilenos-validos.html
 
 Email="lucas.penailillo@mail.udp.cl"
-Pass1="test1234"
-Pass2="iman1234"
+Pass1="iman1234"
+Pass2="test1234"
 s=1
 # Pass= [""]
 # Email=[""]
@@ -55,9 +55,9 @@ print(Pass2) #imprimir contraseña o conjunto de contraseñas cuando son mas de 
 
 ############## datos de ingreso ####################
 Email="lucas.penailillo@mail.udp.cl"
-Pass1="test1234"
-Pass2="iman1234"
-User="sarv"
+Pass1="iman1234"
+Pass2="test1234"
+User="sarvf"
 Activacion=""
 ####################################################
 driver = webdriver.Chrome('./chromedriver.exe')
@@ -308,4 +308,4 @@ imput_buton.click()
 
 
 
-# driver.close()
+driver.close()
