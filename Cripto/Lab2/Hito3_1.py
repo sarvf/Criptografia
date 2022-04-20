@@ -175,7 +175,7 @@ for k in range(N):
     s+=1
     sleep(1)
     print("click en finalizar registro ........")
-    # imput_buton.click()
+    imput_buton.click()
 
 
 
@@ -204,7 +204,7 @@ for k in range(N):
     s+=1
     sleep(2)
     print("Haciendo click en enviar correo de recuperacion ........")
-    # imput_buton.click()
+    imput_buton.click()
 
     ###################### Login #################
     driver.get('https://www.lapolar.cl/Iniciar-Sesion/')
@@ -334,6 +334,6 @@ for k in range(N):
     s+=1
     sleep(2)
     print("Haciendo click en Actualizar contraseña ....")
-    # imput_buton.click()
+    imput_buton.click()
     sleep(4)
 driver.close()
