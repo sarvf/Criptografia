@@ -42,7 +42,7 @@ Email.clear()
 Rut.clear()
 Telefono.clear()
 
-file1 = open('./Hito3_1.txt',"r")
+file1 = open('Hito3_1.txt')
 N=0
 for i in file1:
     line = file1.readline()
@@ -176,12 +176,14 @@ for k in range(N):
     sleep(1)
     print("click en finalizar registro ........")
     imput_buton.click()
+    driver.close
 
 
 
-
+    driver = webdriver.Chrome('./chromedriver.exe')
     ############## Olvidar Password ###################
     print("olvidar contraseña .........")
+    driver.maximize_window()
     driver.get('https://www.lapolar.cl/Iniciar-Sesion/')
     WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[1]/form/div[6]/a')))
     imput_buton= driver.find_element(By.XPATH, '/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[1]/form/div[6]/a')
@@ -190,7 +192,7 @@ for k in range(N):
     sleep(2)
     print("Haciendo click olvidar password ........")
     imput_buton.click()
-    sleep(5)
+    WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[8]/div[2]/div/div/form/div[1]/div[1]/div[2]/input')))
     imput_email= driver.find_element(By.XPATH,'/html/body/div[8]/div[2]/div/div/form/div[1]/div[1]/div[2]/input')
     s+=1
     sleep(2)
