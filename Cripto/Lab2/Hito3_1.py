@@ -176,11 +176,11 @@ for k in range(N):
     sleep(1)
     print("click en finalizar registro ........")
     imput_buton.click()
-    driver.close
+    
 
 
 
-    driver = webdriver.Chrome('./chromedriver.exe')
+  
     ############## Olvidar Password ###################
     print("olvidar contraseña .........")
     driver.maximize_window()

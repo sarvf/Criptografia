@@ -152,7 +152,7 @@ for k in range(N):
     s+=1
     sleep(1)
     print("click en finalizar registro ........")
-    imput_buton.click()
+    # imput_buton.click()
 
 
 
