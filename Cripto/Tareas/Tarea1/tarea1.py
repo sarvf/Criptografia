@@ -23,6 +23,7 @@ def ConstruirMatriz(h):
     hexL=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
     matriz=[['','','',''],['','','',''],['','','',''],['','','','']]
     cnt=0
+    e=0
     for letter in h:
         if (llave.count(letter)==0):
             llave.append(letter)
@@ -32,14 +33,22 @@ def ConstruirMatriz(h):
             if (cnt >=len(llave)):
                 # print("if")
                 matriz[x][j]= hexL.pop(0)
-                indices[matriz[x][j]][0]=x
-                indices[matriz[x][j]][0]=j
+                print("1 error N ",e)
+                e+=1
+                indices[type(x(matriz[x][j]))][0]=x
+                print("2 error N ",e)
+                e+=1
+                indices[type(x(matriz[x][j]))][1]=j
 
             else:
                 # print("else")
                 matriz[x][j]= llave[cnt]
-                indices[matriz[x][j]][0]=x
-                indices[matriz[x][j]][0]=j
+                print("3 error N ",e)
+                e+=1
+                indices[type(x(matriz[x][j]))][0]=x
+                print("4 error N ",e)
+                e+=1
+                indices[type(x(matriz[x][j]))][1]=j
                 cnt+=1
     return matriz
 def CifrarMensaje(matriz,mensaje):
