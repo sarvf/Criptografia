@@ -32,9 +32,14 @@ def ConstruirMatriz(h):
             if (cnt >=len(llave)):
                 # print("if")
                 matriz[x][j]= hexL.pop(0)
+                indices[matriz[x][j]][0]=x
+                indices[matriz[x][j]][0]=j
+
             else:
                 # print("else")
                 matriz[x][j]= llave[cnt]
+                indices[matriz[x][j]][0]=x
+                indices[matriz[x][j]][0]=j
                 cnt+=1
     return matriz
 def CifrarMensaje(matriz,mensaje):
