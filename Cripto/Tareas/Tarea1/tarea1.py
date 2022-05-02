@@ -1,3 +1,6 @@
+
+indices=[["",""],["",""],["",""],["",""],["",""],["",""],["",""],["",""],["",""],["",""],["",""],["",""],["",""],["",""],["",""],["",""]]
+
 def ASCIItoHEX(ascii):   
     hexa = ""
     for i in range(len(ascii)):
@@ -34,6 +37,9 @@ def ConstruirMatriz(h):
                 matriz[x][j]= llave[cnt]
                 cnt+=1
     return matriz
+def CifrarMensaje(matriz,mensaje):
+
+    return
 if __name__ == "__main__":
     print(hexToASCII("636c617665"))
     print(ASCIItoHEX("clave"))
