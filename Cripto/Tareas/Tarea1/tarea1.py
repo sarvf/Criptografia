@@ -35,20 +35,20 @@ def ConstruirMatriz(h):
                 matriz[x][j]= hexL.pop(0)
                 print("1 error N ",e)
                 e+=1
-                indices[type(x(matriz[x][j]))][0]=x
+                indices[int(matriz[x][j])][0]=x
                 print("2 error N ",e)
                 e+=1
-                indices[type(x(matriz[x][j]))][1]=j
+                indices[int(matriz[x][j])][1]=j
 
             else:
                 # print("else")
                 matriz[x][j]= llave[cnt]
                 print("3 error N ",e)
                 e+=1
-                indices[type(x(matriz[x][j]))][0]=x
+                indices[int(matriz[x][j])][0]=x
                 print("4 error N ",e)
                 e+=1
-                indices[type(x(matriz[x][j]))][1]=j
+                indices[int(matriz[x][j])][1]=j
                 cnt+=1
     return matriz
 def CifrarMensaje(matriz,mensaje):
