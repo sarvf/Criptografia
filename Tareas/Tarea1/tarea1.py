@@ -77,6 +77,14 @@ def ConstruirMatriz(h,indices):
                 cnt+=1
     print(indices)
     return matriz
+def desplazamiento(FilaColumna1, FilaColumna2):
+    if(FilaColumna1[0] == FilaColumna2[0] and FilaColumna1[1] != FilaColumna2[1]):
+        return "Vertical"
+    elif(FilaColumna1[0] != FilaColumna2[0] and FilaColumna1[1] == FilaColumna2[1]):
+        return "Horizontal"
+    else:
+        return "Diagonal"
+
 # def CifrarMensaje(matriz,mensaje):
 #     return
 if __name__ == "__main__":
