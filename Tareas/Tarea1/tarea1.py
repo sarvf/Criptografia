@@ -2,13 +2,11 @@
 # Felipe Ulloa e Iman jarufe, por lo que es posible que 
 # los codigos se parescan bastante, dado que fue realizado entre los 3 al mismo tiempo(Trabajo en equipos Rules)
 def ASCIItoHEX(ascii):   
-    hexa = ""
-    for i in range(len(ascii)):
-        ch = ascii[i]
-        in1 = ord(ch)
-        part = hex(in1).lstrip("0x").rstrip("L")
-        hexa += part
-    return hexa
+    hexString=""
+    for i in range (len(ascii)):
+        parHex=format(ord(ascii[i]), "x")
+        hexString+=parHex[0]+parHex[1]
+    return list(hexString)
 def stringHexToHex(char):
     if(char=='a'):return 10
     elif(char=='b'):return 11
@@ -123,6 +121,7 @@ if __name__ == "__main__":
 
     file1 = open('./LlaveMensajeDelMal.txt')
     LlaveDelMal = file1.readline()
+    LlaveDelMal = LlaveDelMal.replace("\n","")
     MensajeDelMal = file1.readline()
     indices2=[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
-    print(CifrarMensaje(ConstruirMatriz(ASCIItoHEX(LlaveDelMal),indices2), indices2,MensajeDelMal))
+    print(CifrarMensaje(ConstruirMatriz(ASCIItoHEX(list(LlaveDelMal)),indices2), indices2,MensajeDelMal))
