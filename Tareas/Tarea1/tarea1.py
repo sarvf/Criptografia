@@ -1,9 +1,14 @@
-# # la realizacion de la tarease realizo en conjunto con:
+# # la realizacion de la tarea fue en conjunto con:
 # Felipe Ulloa e Iman jarufe, por lo que es posible que 
-# los codigos se parescan bastante
-#
-#
-
+# los codigos se parescan bastante, dado que fue realizado entre los 3 al mismo tiempo(Trabajo en equipos Rules)
+def ASCIItoHEX(ascii):   
+    hexa = ""
+    for i in range(len(ascii)):
+        ch = ascii[i]
+        in1 = ord(ch)
+        part = hex(in1).lstrip("0x").rstrip("L")
+        hexa += part
+    return hexa
 def stringHexToHex(char):
     if(char=='a'):return 10
     elif(char=='b'):return 11
@@ -12,14 +17,6 @@ def stringHexToHex(char):
     elif(char=='e'):return 14
     elif(char=='f'):return 15
     else: return int(char)
-
-def ASCIItoHEX(ascii):   
-    hexString=""
-    for i in range (len(ascii)):
-        parHex=format(ord(ascii[i]), "x")
-        hexString+=parHex[0]+parHex[1]
-    return list(hexString)
-
 def ConstruirMatriz(hexLlave,indices):
     NorepeatHexllave=[]
     universoMatriz=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
@@ -66,12 +63,12 @@ def CifrarMensaje(matriz,indices,mensaje):
     # 7.-Retorna el valor de la matriz(hex) que apunta los indices operados  
     index=0
     MessageHexList=ASCIItoHEX(mensaje)
-    MatrizExt=HexMatrizExt(matriz)
+    MatrizExtendida=HexMatrizExtendida(matriz)
     textoCifrado=""
     print(matriz)
     print('\nIndices : ', indices)
     print('\nMensajeHex : ', MessageHexList ,'\n')
-    print('\nMatrix extendida:', MatrizExt, '\n')
+    print('\nMatrix extendida:', MatrizExtendida, '\n')
     for OneParHex in range(int(len(MessageHexList)/2)):
         #FilaColumna -> FC
         FCFirstHex=indices[stringHexToHex(MessageHexList[index])]
@@ -96,37 +93,36 @@ def CifrarMensaje(matriz,indices,mensaje):
         FCSecondHexCifrado=[FCSecondHexCifrado[0]+1, FCSecondHexCifrado[1]+1]
 
         #Obtemos los hex encriptados y los agregamos al mensaje cifrado
-        textoCifrado+=MatrizExt[FCFirstHexCifrado[0]][FCFirstHexCifrado[1]]+MatrizExt[FCSecondHexCifrado[0]][FCSecondHexCifrado[1]]+" "
+        textoCifrado+=MatrizExtendida[FCFirstHexCifrado[0]][FCFirstHexCifrado[1]]+MatrizExtendida[FCSecondHexCifrado[0]][FCSecondHexCifrado[1]]+" "
 
         print( 'IndicesDesplazados y en Extendida: ',FCFirstHexCifrado, FCSecondHexCifrado, 'Hex Cifrado: ',textoCifrado,'\n' )
     return textoCifrado
 
-def HexMatrizExt(matriz):
-    matrizExt=[["","","","","",""],["","","","","",""],["","","","","",""],["","","","","",""],["","","","","",""],["","","","","",""]]
-    #LLenando las esquinas de los bordes
-    matrizExt[0][0]=matriz[3][3]
-    matrizExt[0][5]=matriz[3][0]
-    matrizExt[5][0]=matriz[0][3]
-    matrizExt[5][5]=matriz[0][0]
-    #Llenando el resto de bordes
+def HexMatrizExtendida(matriz):
+    matrizExtendida=[["","","","","",""],["","","","","",""],["","","","","",""],["","","","","",""],["","","","","",""],["","","","","",""]]
+    #LLenamos las esquinas de los bordes
+    matrizExtendida[0][0]=matriz[3][3]
+    matrizExtendida[0][5]=matriz[3][0]
+    matrizExtendida[5][0]=matriz[0][3]
+    matrizExtendida[5][5]=matriz[0][0]
+    #Llenamos el resto de bordes
     for b1 in range(4):
-        matrizExt[0][b1+1]=matriz[3][b1]
-        matrizExt[b1+1][0]=matriz[b1][3]
-        matrizExt[5][b1+1]=matriz[0][b1]
-        matrizExt[b1+1][5]=matriz[b1][0]
+        matrizExtendida[0][b1+1]=matriz[3][b1]
+        matrizExtendida[b1+1][0]=matriz[b1][3]
+        matrizExtendida[5][b1+1]=matriz[0][b1]
+        matrizExtendida[b1+1][5]=matriz[b1][0]
 
-    #LLenando el resto con la matriz del MAL
+    #LLenamos el resto con la matriz del MAL
     for i in range(4):  
         for j in range(4):
-            matrizExt[i+1][j+1]=matriz[i][j]
+            matrizExtendida[i+1][j+1]=matriz[i][j]
     
-    return matrizExt
+    return matrizExtendida
 
 if __name__ == "__main__":
 
     file1 = open('./LlaveMensajeDelMal.txt')
     LlaveDelMal = file1.readline()
     MensajeDelMal = file1.readline()
-
     indices2=[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
     print(CifrarMensaje(ConstruirMatriz(ASCIItoHEX(LlaveDelMal),indices2), indices2,MensajeDelMal))
