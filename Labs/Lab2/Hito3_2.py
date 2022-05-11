@@ -178,13 +178,17 @@ imput_codigoPostal.send_keys(CodigoPostal)
 print("sleep ",s)
 s+=1
 sleep(1)
-print("Esperando evitando Spam al Email ........")
+print("Selecionando evitar Spam al Email ........")
 imput_buton1.click()
 print("sleep ",s)
 s+=1
 sleep(1)
-print("Esperando evitando Spam al Sms ........")
+print("Selecionando evitar Spam al Sms ........")
 imput_buton2.click()
+print("sleep ",s)
+s+=1
+sleep(1)
+print("Haciendo click en Finalizar registro ........")
 # imput_buton.click()
 
 
