@@ -54,68 +54,56 @@ print(Pass2) #imprimir contraseña o conjunto de contraseñas cuando son mas de 
 ####################################################
 
 ############## datos de ingreso ####################
-# Email="lucas.penailillo@mail.udp.cl"
-# Pass1="iman1234"
-# Pass2="test1234"
-# User="sarvf"
-# Activacion=""
 
-Email="golden75x_a468g@hxsni.com"
+# Email="lucas.penailillo@mail.udp.cl"
+# Nombre="lucas"
+# Apellido="Penailillo"
+# Pass1="Iman1234"
+# Pass2="test1234"
+# Telefono="98623498"
+# Piso="lc4sP3"
+# Calle="lc4sP3"
+# Pueblo="lc4sP3"
+# Ciudad="lc4sP3"
+# Estado="lc4sP3"
+# CodigoPostal="08001"
+
+
+Email="myrtis23u_h855b@hxsni.com"
 Nombre="lucas"
 Apellido="Penailillo"
 Pass1="Iman1234"
 Pass2="test1234"
-Telefono="98623498"
-Piso="lc4sP3"
-Calle="lc4sP3"
-Pueblo="lc4sP3"
-Ciudad="lc4sP3"
-Estado="lc4sP3"
-CodigoPostal="08001"
+
 
 Activacion=""
 ####################################################
 driver = webdriver.Chrome('./chromedriver.exe')
-############# Register #############################
+driver.maximize_window()
+############# Register #############################  
 print("Registrar usuario ..........")
-driver.get('https://account.next.es/es/CustomerRegistration')
-WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[4]/div[2]/div/div/div[2]/div/div/button')))
-imput_buton = driver.find_element(By.XPATH,'/html/body/div[4]/div[2]/div/div/div[2]/div/div/button')
+driver.get('https://eu.puma.com/es/es/account/login')
+WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[12]/div[3]/div/div[1]/div/div[2]/div/button[2]')))
+imput_buton = driver.find_element(By.XPATH,'/html/body/div[12]/div[3]/div/div[1]/div/div[2]/div/button[2]')
 imput_buton.click()
 print("sleep ",s)
 s+=1
 sleep(1)
 print("Haciendo click en las coockies ........")
-WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/main/div[1]/form/div/div[2]/div/div/div/select')))
-imput_selection = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[2]/div/div/div/select')
+imput_buton = driver.find_element(By.XPATH,'/html/body/div[5]/header/puma-location-banner//div/a[4]')
+imput_buton.click()
+WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[5]/div[3]/div/div[1]/div/div/div/ul/li[2]/a')))
+imput_selection = driver.find_element(By.XPATH,'/html/body/div[5]/div[3]/div/div[1]/div/div/div/ul/li[2]/a')
 print("sleep ",s)
 s+=1
 sleep(1)
-print("Haciendo click en el selector ........")
+print("Haciendo click en el selector del registro ........")
 imput_selection.click()
-print("sleep ",s)
-s+=1
-sleep(1)
-imput_selection = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[2]/div/div/div/select/option[2]')
-print("sleep ",s)
-s+=1
-sleep(1)
-print("Haciendo click en el selector SR. ........")
-imput_selection.click()
-print("sleep ",s)
-s+=1
-sleep(1)
+WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[5]/div[3]/div/div[1]/div/div/div/div/div[2]/form/div[1]/div[1]/input')))
 imput_nombre = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[3]/div/div/div/input')
 imput_apellido = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[4]/div/div/div/input')
 imput_email = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[5]/div/div/div/input')
 imput_pass = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[6]/div/div/div[1]/input')
-imput_telefono = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[7]/div[1]/div/div[1]/input')
-imput_piso = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[8]/div[1]/div/div/div/input')
-imput_calle = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[8]/div[2]/div/div/div/input')
-imput_pueblo = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[8]/div[3]/div/div/div/input')
-imput_ciudad = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[8]/div[4]/div/div/div/input')
-imput_estado = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[8]/div[5]/div/div/div/input')
-imput_codigoPostal = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[8]/div[6]/div/div/div/input')
 imput_buton1 = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[9]/div/div[1]/fieldset/div/div[1]/input')
 imput_buton2 = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[9]/div/div[1]/fieldset/div/div[2]/input')
 imput_buton = driver.find_element(By.XPATH,'/html/body/main/div[1]/form/div/div[10]/div[2]/div[1]/button')
@@ -143,41 +131,6 @@ imput_pass.send_keys(Pass1)
 print("sleep ",s)
 s+=1
 sleep(1)
-print("insertar Telefono ........")
-imput_telefono.send_keys(Telefono)
-print("sleep ",s)
-s+=1
-sleep(1)
-print("insertar Piso ........")
-imput_piso.send_keys(Piso)
-print("sleep ",s)
-s+=1
-sleep(1)
-print("insertar Calle ........")
-imput_calle.send_keys(Calle)
-print("sleep ",s)
-s+=1
-sleep(1)
-print("insertar Pueblo ........")
-imput_pueblo.send_keys(Pueblo)
-print("sleep ",s)
-s+=1
-sleep(1)
-print("insertar Ciudad ........")
-imput_ciudad.send_keys(Ciudad)
-print("sleep ",s)
-s+=1
-sleep(1)
-print("insertar Estado ........")
-imput_estado.send_keys(Estado)
-print("sleep ",s)
-s+=1
-sleep(1)
-print("insertar Codigo Postal ........")
-imput_codigoPostal.send_keys(CodigoPostal)
-print("sleep ",s)
-s+=1
-sleep(1)
 print("Selecionando evitar Spam al Email ........")
 imput_buton1.click()
 print("sleep ",s)
@@ -190,44 +143,46 @@ s+=1
 sleep(1)
 print("Haciendo click en Finalizar registro ........")
 # imput_buton.click()
+sleep(5)
 
 
 
 
 # ############## Olvidar Password ###################
-# print("olvidar contraseña .........")
-# driver.get('http://wow.wowaura.com/index.php')
-# WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/table/tbody/tr[2]/td/table/tbody/tr[2]/td/table/tbody/tr[3]/td/a')))
-# imput_buton= driver.find_element(By.XPATH, '/html/body/table/tbody/tr[2]/td/table/tbody/tr[2]/td/table/tbody/tr[3]/td/a')
+print("olvidar contraseña .........")
+# driver.
+driver.get('https://account.next.es/es/Login')
+sleep(5)
+WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR,'#passwordLogin > div:nth-child(3) > div.row > a')))
+
+imput_buton= driver.find_element(By.CSS_SELECTOR,'#passwordLogin > div:nth-child(3) > div.row > a')
+print("sleep ",s)
+s+=1
+sleep(5)
+print("Haciendo click olvidar password ........")
+imput_buton.click()
+sleep(5)
+imput_email= driver.find_element(By.XPATH,'/html/body/div[2]/div[3]/form/div[1]/div/input')
+s+=1
+sleep(2)
+imput_buton= driver.find_element(By.XPATH,'/html/body/div[2]/div[3]/form/div[2]/div/button')
 # print("sleep ",s)
 # s+=1
 # sleep(2)
-# print("Haciendo click olvidar password ........")
+# print("insertando Username  ........")
+# imput_user.send_keys(User)
+print("sleep ",s)
+s+=1
+sleep(2)
+print("insertando Correo electronico  ........")
+imput_email.send_keys(Email)
+print("sleep ",s)
+s+=1
+sleep(2)
+print("Haciendo click en enviar correo de recuperacion ........")
 # imput_buton.click()
-# sleep(5)
-# imput_us= driver.find_element(By.XPATH,'/html/body/table/tbody/tr[2]/td/table/tbody/tr[2]/td/table/tbody/tr[1]/td[2]/input')
-# s+=1
-# sleep(2)
-# imput_email= driver.find_element(By.XPATH,'/html/body/table/tbody/tr[2]/td/table/tbody/tr[2]/td/table/tbody/tr[2]/td[2]/input')
-# s+=1
-# sleep(2)
-# imput_buton= driver.find_element(By.XPATH,'/html/body/table/tbody/tr[2]/td/table/tbody/tr[2]/td/table/tbody/tr[3]/td/input[1]')
-# # print("sleep ",s)
-# # s+=1
-# # sleep(2)
-# # print("insertando Username  ........")
-# # imput_user.send_keys(User)
-# print("sleep ",s)
-# s+=1
-# sleep(2)
-# print("insertando Correo electronico  ........")
-# imput_email.send_keys(Email)
-# print("sleep ",s)
-# s+=1
-# sleep(2)
-# print("Haciendo click en enviar correo de recuperacion ........")
-# # imput_buton.click()
-# ################## correos de confirmacion #############
+
+################## correos de confirmacion #############
 
 
 # # # # con correo termporal
