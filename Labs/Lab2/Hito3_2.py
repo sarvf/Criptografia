@@ -54,11 +54,19 @@ print(Pass2) #imprimir contraseña o conjunto de contraseñas cuando son mas de 
 ####################################################
 
 ############## datos de ingreso ####################
-Email="lucas.penailillo@mail.udp.cl"
-Pass1="iman1234"
-Pass2="test1234"
+# Email="lucas.penailillo@mail.udp.cl"
+# Pass2="iman1234"
+# Pass1="test1234"
 User="sarvf"
 Activacion=""
+Pass1="hola1234"
+Pass2="test1234"
+
+Email="lucaspenailillomoreno@gmail.com"
+# Pass2="hola1234"
+# Pass1="test1234"
+# User="sarvft"
+# Activacion=""
 ####################################################
 driver = webdriver.Chrome('./chromedriver.exe')
 ############# Register #############################
@@ -173,22 +181,22 @@ imput_email= driver.find_element(By.XPATH,'/html/body/table/tbody/tr[2]/td/table
 s+=1
 sleep(2)
 imput_buton= driver.find_element(By.XPATH,'/html/body/table/tbody/tr[2]/td/table/tbody/tr[2]/td/table/tbody/tr[3]/td/input[1]')
-# print("sleep ",s)
-# s+=1
-# sleep(2)
-# print("insertando Username  ........")
-# imput_user.send_keys(User)
 print("sleep ",s)
 s+=1
 sleep(2)
-print("insertando Correo electronico  ........")
-imput_email.send_keys(Email)
+print("insertando Username  ........")
+imput_us.send_keys(User)
+# print("sleep ",s)
+# s+=1
+# sleep(2)
+# print("insertando Correo electronico  ........")
+# imput_email.send_keys(Email)
 print("sleep ",s)
 s+=1
 sleep(2)
 print("Haciendo click en enviar correo de recuperacion ........")
-# imput_buton.click()
-################## correos de confirmacion #############
+imput_buton.click()
+# ################## correos de confirmacion #############
 
 
 # # # con correo termporal

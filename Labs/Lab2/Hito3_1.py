@@ -56,112 +56,114 @@ print(Pass2) #imprimir contraseña o conjunto de contraseñas cuando son mas de 
 ####################################################
 
 ############## datos de ingreso ####################
-Email="lucas.penailillo@mail.udp.cl"
-Pass1="test1234"
-Pass2="iman1234"
-Nombre=""
-Apellido=""
-Telefono=""
-Rut=""
+Email="lucaspenailillomoreno@gmail.com"
+Pass1="ayelen"
+Pass2="seminario"
+Nombre="ayelen"
+Apellido="seminario"
+Telefono="982043957"
+Rut="11695810-4"
+# Pass2="test1234"
+# Pass1="iman1234"
 ####################################################
 driver = webdriver.Chrome('./chromedriver.exe')
 ############# Register #############################
-print("Registrar usuario ..........")
-driver.get('https://www.lapolar.cl/Iniciar-Sesion/')
-WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/ul/li[2]/a')))
-imput_buton = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/ul/li[2]/a')
-print("sleep ",s)
-s+=1
-sleep(1)
-print("Haciendo click en el registro ........")
-imput_buton.click()
-WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/ul/li[2]/a')))
-imput_buton = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/button')
-print("sleep ",s)
-s+=1
-sleep(1)
-imput_nombre = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[2]/input')
-print("sleep ",s)
-s+=1
-sleep(1)
-imput_apellido = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[3]/input')
-print("sleep ",s)
-s+=1
-sleep(1)
-imput_Rut = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[5]/div/input')
-print("sleep ",s)
-s+=1
-sleep(1)
-imput_telefono = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[4]/div/div[2]/input')
-print("sleep ",s)
-s+=1
-sleep(1)
-imput_email = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[6]/input')
-print("sleep ",s)
-s+=1
-sleep(1)
-imput_checbox = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[7]/div[1]/div[1]/label/span')
-print("sleep ",s)
-s+=1
-sleep(1)
-imput_pass = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[8]/input')
-print("sleep ",s)
-s+=1
-sleep(1)
-imput_confirmpass = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[9]/input')
-print("sleep ",s)
-s+=1
-sleep(1)
-imput_checbox2 = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[10]/label')
-print("sleep ",s)
-s+=1
-sleep(1)
-print("insertar nombre ........")
-imput_nombre.send_keys(Nombre)
-print("sleep ",s)
-s+=1
-sleep(1)
-print("insertar Apellido ........")
-imput_apellido.send_keys(Apellido)
-print("sleep ",s)
-s+=1
-sleep(1)
-print("insertar Telefono ........")
-imput_telefono.send_keys(Telefono)
-print("sleep ",s)
-s+=1
-sleep(1)
-print("insertar RUT ........")
-imput_Rut.send_keys(Rut)
-print("sleep ",s)
-s+=1
-sleep(1)
-print("insertar correo electronico ........")
-imput_email.send_keys(Email)
-print("sleep ",s)
-s+=1
-sleep(1)
-print("seleccioner genero masculino ........")
-imput_checbox.click()
-print("sleep ",s)
-s+=1
-sleep(1)
-print("insertar password ........")
-imput_pass.send_keys(Pass1)
-print("sleep ",s)
-s+=1
-sleep(1)
-print("insertar password nuevamente ........")
-imput_confirmpass.send_keys(Pass1)
-print("sleep ",s)
-s+=1
-sleep(1)
-print("deseleccionar los correos de spam ........")
-imput_checbox2.click()
-print("sleep ",s)
-s+=1
-sleep(1)
-print("click en finalizar registro ........")
+# print("Registrar usuario ..........")
+# driver.get('https://www.lapolar.cl/Iniciar-Sesion/')
+# WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/ul/li[2]/a')))
+# imput_buton = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/ul/li[2]/a')
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# print("Haciendo click en el registro ........")
+# imput_buton.click()
+# WebDriverWait(driver,15).until(EC.presence_of_all_elements_located((By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/ul/li[2]/a')))
+# imput_buton = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/button')
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# imput_nombre = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[2]/input')
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# imput_apellido = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[3]/input')
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# imput_Rut = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[5]/div/input')
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# imput_telefono = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[4]/div/div[2]/input')
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# imput_email = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[6]/input')
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# imput_checbox = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[7]/div[1]/div[1]/label/span')
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# imput_pass = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[8]/input')
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# imput_confirmpass = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[9]/input')
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# imput_checbox2 = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/form/div[10]/label')
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# print("insertar nombre ........")
+# imput_nombre.send_keys(Nombre)
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# print("insertar Apellido ........")
+# imput_apellido.send_keys(Apellido)
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# print("insertar Telefono ........")
+# imput_telefono.send_keys(Telefono)
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# print("insertar RUT ........")
+# imput_Rut.send_keys(Rut)
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# print("insertar correo electronico ........")
+# imput_email.send_keys(Email)
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# print("seleccioner genero masculino ........")
+# imput_checbox.click()
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# print("insertar password ........")
+# imput_pass.send_keys(Pass1)
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# print("insertar password nuevamente ........")
+# imput_confirmpass.send_keys(Pass1)
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# print("deseleccionar los correos de spam ........")
+# imput_checbox2.click()
+# print("sleep ",s)
+# s+=1
+# sleep(1)
+# print("click en finalizar registro ........")
 # imput_buton.click()
 
 
@@ -178,10 +180,10 @@ sleep(2)
 print("Haciendo click olvidar password ........")
 imput_buton.click()
 sleep(5)
-imput_email= driver.find_element(By.XPATH,'/html/body/div[8]/div[2]/div/div/form/div[1]/div[1]/div[2]/input')
+imput_email= driver.find_element(By.XPATH,'/html/body/div[7]/div[2]/div/div/form/div[1]/div[1]/div[2]/input')
 s+=1
 sleep(2)
-imput_buton= driver.find_element(By.XPATH,'//*[@id="reset-password-email"]')
+imput_buton= driver.find_element(By.XPATH,'/html/body/div[7]/div[2]/div/div/form/div[1]/div[2]/button')
 print("sleep ",s)
 s+=1
 sleep(2)
@@ -191,9 +193,9 @@ print("sleep ",s)
 s+=1
 sleep(2)
 print("Haciendo click en enviar correo de recuperacion ........")
-# imput_buton.click()
+imput_buton.click()
 
-# # con correo termporal
+# # # con correo termporal
 
 
 
@@ -333,7 +335,7 @@ print("ingresando Password Nueva ....")
 print(Pass2)
 imput_newpass.send_keys(Pass2)
 print("sleep ",s)
-s+=1
+s+=1  
 sleep(2)
 print("Confirmando Password Nueva ....")
 print(Pass2)
@@ -342,7 +344,7 @@ print("sleep ",s)
 s+=1
 sleep(2)
 print("Haciendo click en Actualizar contraseña ....")
-# imput_buton.click()
+imput_buton.click()
 
 
 sleep(4)
